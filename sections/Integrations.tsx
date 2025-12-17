@@ -1,8 +1,9 @@
 import Tag from "@/components/Tag";
 import React from "react";
 import Marquee from "react-fast-marquee";
-import Image from "next/image";
+
 import AnimatedText from "@/lib/gsap";
+import Image from "next/image";
 
 const techs = [
   {

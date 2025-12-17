@@ -1,6 +1,7 @@
 import Tag from "@/components/Tag";
 import AnimatedText from "@/lib/gsap";
 import Image from "next/image";
+
 import React from "react";
 
 const otherFeatures = [
