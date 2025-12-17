@@ -2,6 +2,7 @@ import Tag from "@/components/Tag";
 import React from "react";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
+import AnimatedText from "@/lib/gsap";
 
 const techs = [
   {
@@ -43,17 +44,23 @@ const techs = [
 ];
 export default function Integrations() {
   return (
-    <main id="integration" className="w-full h-max pad-2 flex items-center justfiy-between  flex-col lg:flex-row gap-12 lg:gap-0 ">
-      <div className="flex justify-center flex-col gap-4">
-        <Tag text="* integrations" />
-        <h1 className="text-6xl text-white ">
-          Plays well <br /> with <span className="text-lime-400">others</span>
+    <main id="integration" className="w-full h-max pad-2 flex items-center md:justify-between  flex-col lg:flex-row gap-12 lg:gap-0 ">
+      <div className="flex justify-center flex-col gap-6">
+        <Tag text="integrations" />
+        <AnimatedText animate="leftToRight">
+
+        <h1 className="text-5xl md:text-6xl text-white ">
+          Plays well <br /> with <span className="text-lime-400 ">others</span>
         </h1>
-        <p className="font-normal text-gray-400 text-lg">
-          {" "}
+        </AnimatedText>
+        <AnimatedText animate="leftToRight" delay={.5}>
+
+        <p className="font-normal text-gray-400 text-md max-w-md ">
+        
           Layers seamlessly connects with your favourite tools, making it easy
           to plug into any workflow and collaborate acroos platforms.
         </p>
+        </AnimatedText>
       </div>
       <div className="w-full lg:w-[50%] h-max  flex flex-col items-center justfiy-center gap-8 ">
         <Marquee direction="right" className="flex items-center justfiy-center gap-8">

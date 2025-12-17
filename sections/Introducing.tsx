@@ -1,17 +1,29 @@
-import Tag from "@/components/Tag";
-import Image from "next/image";
+"use client";
+
+import { useRef } from "react";
+import { useHorizontalScroll } from "@/lib/gsap";
+
 export default function Introducing() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLParagraphElement>(null);
+
+  useHorizontalScroll(containerRef as any, textRef as any);
+
   return (
-    <div className="flex items-center justify-center flex-col gap-8 mt-12 w-full h-screen pad-2 ">
-     <Tag text="* Introducing layers"/>
-      <p className="text-gray-400 text-4xl lg:text-7xl text-center">
-        Your creative process deserve better. You're racing to create
-        exceptional work, but traditional design tools slow you down with
-        unnecessary complexity and steep learning curves.
+    <section
+      ref={containerRef}
+      className="h-screen overflow-hidden flex items-center"
+    >
+      <p
+        ref={textRef}
+        className="whitespace-nowrap text-4xl lg:text-7xl text-gray-400 will-change-transform"
+      >
+        Your creative process <strong className="text-gray-200"> deserves better. </strong> You’re racing to create
+      <strong className="text-gray-200">  exceptional work </strong> — but  <strong className="text-gray-200"> traditional  </strong>tools slow you down.
+        <span className="text-lime-500 ml-4">
+          That’s why we built Layers.
+        </span>
       </p>
-      <span className="text-lime-500 text-4xl lg:text-6xl">
-        That's why we built layers.
-      </span>
-    </div>
+    </section>
   );
 }

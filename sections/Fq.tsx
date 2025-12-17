@@ -1,5 +1,6 @@
 "use client"
 import Tag from "@/components/Tag"
+import AnimatedText from "@/lib/gsap";
 import { useState } from "react";
 
 
@@ -49,13 +50,16 @@ export default function FAQ() {
   return (
     <main
       id="faq"
-      className="w-full h-screen pad-2  flex items-center justify-center flex-col gap-8"
+      className="w-full h-screen pad-2  flex items-center justify-center flex-col gap-8 mt-12"
     >
       <Tag text="FAQ's" />
+
+<AnimatedText animate="bottomToTop">
 
       <h1 className="text-center text-4xl md:text-6xl lg:text-7xl text-white  ">
         Questions? We've got <br/> <span className="text-lime-500">answers.</span>
       </h1>
+</AnimatedText>
 
       
 

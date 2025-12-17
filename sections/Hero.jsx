@@ -8,9 +8,10 @@ export default function Hero() {
     
       <div className=" lg:flex items-center justify-around h-screen w-full relative overflow-hidden ">
         <Image
+      
           src="/design-example-1.png"
           alt="Example"
-          className="hidden absolute left-[-7%] lg:block"
+          className="hidden absolute left-[-7%] lg:block "
           width="300"
           height="400"
         />
